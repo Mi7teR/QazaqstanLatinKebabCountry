@@ -46,6 +46,11 @@
         </social-sharing>
       </div>
     </div>
+    <div class="columns">
+      <div class="column">
+        <gh-btns-star slug="Mi7teR/QazaqstanLatinKebabCountry" show-count></gh-btns-star>
+      </div>
+    </div>
   </div>
 </template>
 
