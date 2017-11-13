@@ -8,14 +8,14 @@
   version = "v1.0.1"
 
 [[projects]]
-  name = "gopkg.in/telegram-bot-api.v2"
+  name = "gopkg.in/telegram-bot-api.v4"
   packages = ["."]
-  revision = "6faae88cbd1dad3d6c06c2a290f50fa38894f90e"
-  version = "v2.2.1"
+  revision = "2022d04b94f50056a09962b1ac81cdd821d20a55"
+  version = "v4.6.1"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "a4e96ae691d36381c9f7c6f36107d53193045086e8d46991a5b824d4f3b06e3c"
+  inputs-digest = "2e8aaf880849aafe9ba8d900fc75547255b682b4e1946459c3c28b08c6fe02c6"
   solver-name = "gps-cdcl"
   solver-version = 1
