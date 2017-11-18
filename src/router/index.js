@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import QazaqstanBestKebabCountry from '@/components/QazaqstanBestKebabCountry'
+import QazaqstanLatinKebabCountry from '@/components/QazaqstanLatinKebabCountry'
 
 Vue.use(Router)
 
@@ -10,7 +10,7 @@ const router = new Router({
     {
       path: '/',
       name: 'KebabStan',
-      component: QazaqstanBestKebabCountry,
+      component: QazaqstanLatinKebabCountry,
       meta: {
         title: 'Конвертер кириллицы на латиницу с апострофами'
       }

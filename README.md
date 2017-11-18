@@ -1,4 +1,4 @@
-# QazaqstanBetsKebabCountry
+# QazaqstanLatinKebabCountry
 
 > Another shitty project on github
 
