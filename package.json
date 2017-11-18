@@ -1,9 +1,9 @@
 {
-  "name": "latin_kz",
-  "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "o_akhmetkhan <o_akhmetkhan@gamma.kz>",
-  "private": true,
+  "name": "QazaqstanBestKebabLatinCountry",
+  "version": "1.0.1",
+  "description": "Convert cyrillic letter in latin letters of Qazaqstan alphabet",
+  "author": "Mi7teR <iam@mi7ter.xyz>",
+  "private": false,
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "npm run dev",

@@ -7,7 +7,7 @@
             должна быть кириллица :)</p>
           <div class="field">
             <p class="control">
-              <textarea class="textarea" v-model="cyrillicText" v-on:input="transliteText" rows="10"></textarea>
+              <textarea class="textarea" v-model="cyrillicText" rows="10"></textarea>
             </p>
           </div>
         </div>
@@ -18,7 +18,7 @@
           <div class="field">
             <p class="control">
               <textarea class="textarea" v-on:focus="$event.currentTarget.select()" rows="10"
-                        readonly>{{latinText}}</textarea>
+                        readonly>{{ latinText }}</textarea>
             </p>
           </div>
         </div>
@@ -56,118 +56,81 @@
 
 <script>
   let transliteArray = {
-    НГ: 'N\'',
     нг: 'n\'',
-    А: 'A',
     а: 'a',
-    Ә: 'A\'',
-    ә: 'a\'',
-    Ə: 'A\'',
     ə: 'a\'',
-    Б: 'B',
     б: 'b',
-    Д: 'D',
     д: 'd',
-    Е: 'E',
     е: 'e',
-    Ф: 'F',
     ф: 'f',
-    Ғ: 'G\'',
     ғ: 'g\'',
-    Г: 'G',
     г: 'g',
-    Х: 'H',
     х: 'h',
-    І: 'I',
     i: 'i',
-    И: 'I\'',
     и: 'i\'',
-    Й: 'I\'',
     й: 'i\'',
     H: 'H',
     h: 'h',
-    Ж: 'J',
     ж: 'j',
-    К: 'K',
     к: 'k',
-    Л: 'L',
     л: 'l',
-    М: 'M',
     м: 'm',
-    Н: 'N',
     н: 'n',
-    Ң: 'N\'',
     ң: 'n\'',
-    О: 'O',
     о: 'o',
-    Ө: 'O\'',
     ө: 'o\'',
-    П: 'P',
     п: 'p',
-    Қ: 'Q',
     қ: 'q',
-    Р: 'R',
     р: 'r',
-    Ш: 'S\'',
     ш: 's\'',
-    С: 'S',
     с: 's',
-    Т: 'T',
     т: 't',
-    Ұ: 'U',
     ұ: 'u',
-    Ү: 'U\'',
     ү: 'u\'',
-    В: 'V',
     в: 'v',
-    Ы: 'Y',
     ы: 'y',
-    У: 'Y\'',
     у: 'y\'',
-    З: 'Z',
     з: 'z',
-    Ч: 'C\'',
     ч: 'c\'',
-    Э: 'E',
     э: 'e',
-    Щ: 's\'',
     щ: 's\'',
     ь: '',
     ъ: '',
-    Я: 'I\'a',
     я: 'i\'a',
-    Ю: 'I\'y\'',
     ю: 'i\'y\'',
-    Ц: 'Ts',
     ц: 'ts'
   }
   export default {
     name: 'QazaqstanBestKebabCountry',
     data () {
       return {
-        cyrillicText: 'Тура осындай мәселе 1920 жылдары әліпби тақырыбы көтерілгенде айтылған болатын. Жат дыбыстарды кіргіземіз бе, жоқ па, осы мәселе қаралды. Ахмет Байтұрсынұлының әліпбиге қатысты еңбектерін мұқият оқысақ, біз Алаш зиялыларының кейбір кірме дыбыстардың қазақ әліпбиінен орын алуын жақтағанын да көреміз.',
-        latinText: null
+        cyrillicText: 'Тура осындай мәселе 1920 жылдары әліпби тақырыбы көтерілгенде айтылған болатын. Жат дыбыстарды кіргіземіз бе, жоқ па, осы мәселе қаралды. Ахмет Байтұрсынұлының әліпбиге қатысты еңбектерін мұқият оқысақ, біз Алаш зиялыларының кейбір кірме дыбыстардың қазақ әліпбиінен орын алуын жақтағанын да көреміз.'
+      }
+    },
+    computed: {
+      latinText () {
+        let text = this.cyrillicText
+        return this.latinize(text)
       }
     },
     methods: {
-      transliteText () {
-        let text = this.cyrillicText
+      latinize (text) {
         for (let key in transliteArray) {
-          text = this.replaceAll(text, key, transliteArray[key])
+          let character = transliteArray[key]
+          if (character.length > 0) {
+            text = this.replaceAll(text, key.toUpperCase(), character.charAt(0).toUpperCase() + character.slice(1))
+          }
+          text = this.replaceAll(text, key, character)
         }
-        this.latinText = text
+        return text
       },
       replaceAll (str, find, replace) {
         return str.replace(new RegExp(find, 'g'), replace)
       }
-    },
-    mounted () {
-      this.transliteText()
     }
   }
 </script>
 
-<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style>
   .link {
     cursor: pointer;

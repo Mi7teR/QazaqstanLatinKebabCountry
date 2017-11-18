@@ -1,6 +1,6 @@
-# latin_kz
+# QazaqstanBetsKebabCountry
 
-> A Vue.js project
+> Another shitty project on github
 
 ## Build Setup
 
@@ -19,3 +19,18 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+# Telegram bot
+## Build setup
+```bash
+#install dependencies
+dep ensure
+
+#build
+go build
+
+#run
+./QazaqstanBestKebabCountry -token=YOUR_TELEGRAM_BOT_TOKEN
+```
+
+ЗЫ Тесты для бомжей, деплой по фтп рулит
