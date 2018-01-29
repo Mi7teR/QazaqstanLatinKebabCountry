@@ -5,6 +5,8 @@ import (
 	"gopkg.in/telegram-bot-api.v4"
 	"log"
 	"strings"
+  "os"
+  "os/signal"
 )
 
 func main() {
@@ -14,6 +16,8 @@ func main() {
 	if token == "empty" {
 		panic("token qai'da?")
 	}
+  signals := make(chan os.Signal, 1)
+  signal.Notify(signals)
 	bot, err := tgbotapi.NewBotAPI(token)
 	if err != nil {
 		log.Panic(err)
