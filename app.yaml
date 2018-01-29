@@ -1,0 +1,4 @@
+runtime: go
+api_version: go1
+- url: /.*
+  script: _go_app
