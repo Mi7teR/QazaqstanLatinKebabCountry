@@ -19,8 +19,3 @@
 # [[override]]
 #  name = "github.com/x/y"
 #  version = "2.4.0"
-
-
-[[constraint]]
-  name = "gopkg.in/telegram-bot-api.v2"
-  version = "2.2.1"

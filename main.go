@@ -69,6 +69,7 @@ func latinize(str string) string {
 		"нг": "n'",
 		"а":  "a",
 		"ə":  "a'",
+		"ә":  "a'",
 		"б":  "b",
 		"д":  "d",
 		"е":  "e",
