@@ -28,7 +28,7 @@
       <div class="column">
         <social-sharing url="https://marazm.mi7ter.xyz/"
                         title="Конвертер кириллицы на латиницу для казахского языка"
-                        description="Конвертер кириллицы на латиницу для казахского языка. С апострофами."
+                        description="Конвертер кириллицы на латиницу для казахского языка. С диакритиками."
                         quote="Конвертер кириллицы на латиницу для казахского языка."
                         hashtags="qazaq, latin, cyrillic, converter"
                         inline-template>

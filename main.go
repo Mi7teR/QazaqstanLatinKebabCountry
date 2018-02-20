@@ -52,7 +52,7 @@ func main() {
     }
 
     text := latinize(update.InlineQuery.Query)
-    article := tgbotapi.NewInlineQueryResultArticle(update.InlineQuery.ID, "Добавить апострофов", text)
+    article := tgbotapi.NewInlineQueryResultArticle(update.InlineQuery.ID, "Добавить Европы", text)
     article.Description = text
 
     inlineConf := tgbotapi.InlineConfig{
