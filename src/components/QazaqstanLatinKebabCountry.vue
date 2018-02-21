@@ -56,6 +56,7 @@
 
 <script>
   let transliteArray = {
+    'сх': 'skh',
     'а': 'a',
     'ә': 'á',
     'ə': 'á',
