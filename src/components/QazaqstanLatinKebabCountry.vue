@@ -14,7 +14,7 @@
       </div>
       <div class="columns is-mobile is-centered" v-if="latinText">
         <div class="column">
-          <h4 class="title is-4">Na'ti'je:</h4>
+          <h4 class="title is-4">{{latinize('Нәтиже')}}:</h4>
           <div class="field">
             <p class="control">
               <textarea class="textarea" v-on:focus="$event.currentTarget.select()" rows="10"
